@@ -14,6 +14,40 @@
     <meta name="description" content="Ayusha Kakkad's portfolio showcasing data analytics, business intelligence, Power BI, SQL, Python and machine learning projects." />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <style>
+        /* Centre the third project in Professional and Academic sections */
+        .professional-posts > article:nth-child(3),
+        .academic-posts > article:nth-child(3) {
+            margin-left: 25%;
+            position: relative;
+            border-top: 0;
+        }
+
+        /* Add one subtle divider across the white content panel */
+        .professional-posts > article:nth-child(3)::before,
+        .academic-posts > article:nth-child(3)::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -50%;
+            width: 200%;
+            border-top: 1px solid #e2e2e2;
+        }
+
+        /* Keep the layout clean on mobile */
+        @media screen and (max-width: 736px) {
+            .professional-posts > article:nth-child(3),
+            .academic-posts > article:nth-child(3) {
+                margin-left: 0;
+            }
+
+            .professional-posts > article:nth-child(3)::before,
+            .academic-posts > article:nth-child(3)::before {
+                display: none;
+            }
+        }
+    </style>
 </head>
 
 <body class="is-preload">
@@ -84,18 +118,23 @@
                 </p>
             </header>
 
-            <section class="posts">
+            <section class="posts professional-posts">
 
                 <!-- Business Overview Dashboard -->
                 <article>
                     <header>
                         <span class="date">Hibernia College | Professional Project</span>
                         <h2>
-                            <a href="business_overview.html">
+                            <a href="project-business-overview.html">
                                 Business Overview Dashboard
                             </a>
                         </h2>
                     </header>
+
+                    <a href="project-business-overview.html" class="image fit">
+                        <img src="images/Business_overview_blur.png"
+                             alt="Business Overview Power BI dashboard preview" />
+                    </a>
 
                     <p>
                         Developed an end-to-end Power BI dashboard to provide
@@ -106,7 +145,7 @@
 
                     <ul class="actions special">
                         <li>
-                            <a href="business_overview.html" class="button">
+                            <a href="project-business-overview.html" class="button">
                                 View Project
                             </a>
                         </li>
@@ -118,11 +157,16 @@
                     <header>
                         <span class="date">Hibernia College | Professional Project</span>
                         <h2>
-                            <a href="customer_journey.html">
+                            <a href="project-customer-journey.html">
                                 Customer Journey Analysis
                             </a>
                         </h2>
                     </header>
+
+                    <a href="project-customer-journey.html" class="image fit">
+                        <img src="images/Customer_Journey_Analysis1.png"
+                             alt="Customer Journey Analysis dashboard showing opportunity conversion and journey duration" />
+                    </a>
 
                     <p>
                         Developed an interactive Power BI dashboard to analyse
@@ -133,7 +177,7 @@
 
                     <ul class="actions special">
                         <li>
-                            <a href="customer_journey.html" class="button">
+                            <a href="project-customer-journey.html" class="button">
                                 View Project
                             </a>
                         </li>
@@ -150,6 +194,11 @@
                             </a>
                         </h2>
                     </header>
+
+                    <a href="project-learning-analytics.html" class="image fit">
+                        <img src="images/Learning_Analytics1.png"
+                             alt="Learning Analytics dashboard showing overall student engagement across modules" />
+                    </a>
 
                     <p>
                         Collaborated on a reporting solution to track student
@@ -178,7 +227,7 @@
                 </p>
             </header>
 
-            <section class="posts">
+            <section class="posts independent-posts">
 
                 <!-- Logistics & Supply Chain Analytics -->
                 <article>
@@ -190,6 +239,11 @@
                             </a>
                         </h2>
                     </header>
+
+                    <a href="project-logistics-analytics.html" class="image fit">
+                        <img src="images/Logistics1.png"
+                             alt="Logistics dashboard showing executive revenue, shipment and operational performance" />
+                    </a>
 
                     <p>
                         Independently developed an interactive Power BI dashboard
@@ -207,6 +261,41 @@
                     </ul>
                 </article>
 
+                <!-- COVID-19 Analysis -->
+                <article>
+                    <header>
+                        <span class="date">June 2024 | Independent Project</span>
+                        <h2>
+                            <a href="https://public.tableau.com/app/profile/ayusha.kakkad/viz/CovidSQLTableauDashboard/Dashboard1"
+                               target="_blank" rel="noopener noreferrer">
+                                COVID-19 Data Analysis and Visualisation
+                            </a>
+                        </h2>
+                    </header>
+
+                    <a href="https://public.tableau.com/app/profile/ayusha.kakkad/viz/CovidSQLTableauDashboard/Dashboard1"
+                       class="image fit" target="_blank" rel="noopener noreferrer">
+                        <img src="images/Picture4.png"
+                             alt="COVID-19 data analysis Tableau dashboard" />
+                    </a>
+
+                    <p>
+                        Cleaned and analysed global COVID-19 datasets using
+                        SQL Server to explore infection rates, death percentages
+                        and vaccination progress. Created interactive Tableau
+                        visualisations to examine trends and geographical patterns.
+                    </p>
+
+                    <ul class="actions special">
+                        <li>
+                            <a href="https://public.tableau.com/app/profile/ayusha.kakkad/viz/CovidSQLTableauDashboard/Dashboard1"
+                               class="button" target="_blank" rel="noopener noreferrer">
+                                View Project
+                            </a>
+                        </li>
+                    </ul>
+                </article>
+
             </section>
 
             <!-- Academic & Technical Projects -->
@@ -218,7 +307,7 @@
                 </p>
             </header>
 
-            <section class="posts">
+            <section class="posts academic-posts">
 
                 <!-- Customer Emotion Analysis -->
                 <article>
@@ -283,57 +372,6 @@
                         </li>
                     </ul>
                 </article>
-
-                <!-- COVID-19 Analysis -->
-                <article>
-                    <header>
-                        <span class="date">June 2024 | Independent Project</span>
-                        <h2>
-                            <a href="https://public.tableau.com/app/profile/ayusha.kakkad/viz/CovidSQLTableauDashboard/Dashboard1"
-                               target="_blank" rel="noopener noreferrer">
-                                COVID-19 Data Analysis and Visualisation
-                            </a>
-                        </h2>
-                    </header>
-
-                    <a href="https://public.tableau.com/app/profile/ayusha.kakkad/viz/CovidSQLTableauDashboard/Dashboard1"
-                       class="image fit" target="_blank" rel="noopener noreferrer">
-                        <img src="images/Picture4.png"
-                             alt="COVID-19 data analysis Tableau dashboard" />
-                    </a>
-
-                    <p>
-                        Cleaned and analysed global COVID-19 datasets using
-                        SQL Server to explore infection rates, death percentages
-                        and vaccination progress. Created interactive Tableau
-                        visualisations to examine trends and geographical patterns.
-                    </p>
-
-                    <ul class="actions special">
-                        <li>
-                            <a href="https://public.tableau.com/app/profile/ayusha.kakkad/viz/CovidSQLTableauDashboard/Dashboard1"
-                               class="button" target="_blank" rel="noopener noreferrer">
-                                View Tableau Dashboard
-                            </a>
-                        </li>
-                    </ul>
-                </article>
-
-                <!-- Cognitive Mapping -->
-                <!-- <article>
-                    <header>
-                        <span class="date">July 2024 | Academic Project</span>
-                        <h2>
-                            Cognitive Mapping of Resistance Movement
-                        </h2>
-                    </header>
-
-                    <p>
-                        An academic project exploring cognitive mapping in the
-                        context of resistance movements. Further project details
-                        and a public repository link can be added when available.
-                    </p>
-                </article> -->
 
                 <!-- Word Association Network Analysis -->
                 <article>
@@ -429,7 +467,7 @@
         <div id="copyright">
             <ul>
                 <li>&copy; Ayusha Kakkad</li>
-                <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+                <!-- <li>Design: <a href="https://html5up.net">HTML5 UP</a></li> -->
             </ul>
         </div>
 
